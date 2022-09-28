@@ -5,14 +5,22 @@ this.rider =rider;
 this.eats =eats;
 if (eats === undefined) {
 this.hungry = true;
+this.eats =0;
+}
+if (this.eats>2) {
+    this.hungry =false;
 }
 }
 
+
 eat() {
-    if (this.eat >= 3){
-        return false;
+    this.eats++
+    console.log(this.eats)
+    if (this.eats > 2) {
+        this.hungry = false;
     }
 }
+
 
 greet(message) {
     return `Hi, ${this.rider}!`
