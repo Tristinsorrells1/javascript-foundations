@@ -7,9 +7,6 @@ if (eats === undefined) {
 this.hungry = true;
 this.eats =0;
 }
-if (this.eats>2) {
-    this.hungry =false;
-}
 }
 
 
