@@ -6,16 +6,13 @@ this.eat =eat;
 if (eat === undefined) {
 this.hungry = true;
 }
-else if (eat >= 3) {
-this.hungry = false;
-}
-}
-
 }
 
 
-
-
+greet(message) {
+    return `Hi, ${this.rider}!`
+}
+}
 
 
  var smaug = new Dragon(); 
