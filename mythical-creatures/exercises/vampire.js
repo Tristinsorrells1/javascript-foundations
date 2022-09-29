@@ -1,5 +1,5 @@
 class Vampire {
-    constructor(name, pet, thirsty) {
+    constructor(name, pet, thirsty, ouncesDrank) {
     this.name =name;
     this.pet =pet;
     if (pet === undefined){
@@ -8,8 +8,21 @@ class Vampire {
     this.thirsty =thirsty;
     if (thirsty === undefined) {
         this.thirsty=true
+    this.ouncesDrank =ouncesDrank;
+    if (ouncesDrank === undefined) {
+        this.ouncesDrank=0
+    }
     }
  
+}
+
+drink() {
+    this.thirsty=false
+    this.ouncesDrank += 10; 
+    if (this.ouncesDrank >= 50) {
+        this.ouncesDrank =50;
+        console.log('I\'m too full to drink anymore!')
+    }
 }
 }
 
