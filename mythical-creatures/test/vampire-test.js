@@ -3,7 +3,7 @@ var Vampire = require('../exercises/vampire');
 
 describe('Vampire', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Vampire);
   });
 
@@ -13,7 +13,7 @@ describe('Vampire', function() {
     assert.instanceOf(dracula, Vampire);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var vampire = new Vampire('Jhun');
 
     assert.equal(vampire.name, 'Jhun');
