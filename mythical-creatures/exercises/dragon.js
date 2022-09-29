@@ -12,7 +12,6 @@ this.eats =0;
 
 eat() {
     this.eats++
-    console.log(this.eats)
     if (this.eats > 2) {
         this.hungry = false;
     }
