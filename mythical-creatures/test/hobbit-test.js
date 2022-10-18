@@ -81,3 +81,5 @@ describe('Hobbit', function() {
     assert.equal(hobbit2.hasRing, false);
   });
 });
+
+
