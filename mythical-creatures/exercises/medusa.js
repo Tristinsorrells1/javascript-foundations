@@ -15,19 +15,11 @@ var newStatue = new Statue(victim.name)
         this.statues.push(newStatue)
         if (this.statues.length > 3) {
            var person = this.statues.splice(0,1)
-           return new Person(person[0].name, 'relieved')
+           return new Person(person.name, 'frightened')
         }
 
     }
 }
-
-
-
-
-
-
-
-
 
 module.exports = Medusa; 
 
