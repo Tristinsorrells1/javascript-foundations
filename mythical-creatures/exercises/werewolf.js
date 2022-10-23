@@ -37,5 +37,5 @@ class Werewolf {
 module.exports =  Werewolf;
 
 
-// npm test mythical-creatures/test/werewolf-test.js
+
 
