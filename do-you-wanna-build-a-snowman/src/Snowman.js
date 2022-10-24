@@ -8,8 +8,14 @@ class Snowman {
     this.isWearingHat = false
     }
 canWearMagicHat(){
-    this.magicHat = true
-    return true
+    if (this.buttons < 5 || this.coal < 2 || this.carrots < 1 || this.snowballs < 2) {
+        this.magicHat = false
+        return false
+    }
+    else {
+        this.magicHat = true
+        return true
+    }
 }
 }
 
