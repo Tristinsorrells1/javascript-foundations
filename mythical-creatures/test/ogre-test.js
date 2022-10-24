@@ -86,7 +86,7 @@ describe('Ogre', () => {
     assert.equal(ogre.swings, 1);
   });
 
-  it.skip('', function() {
+  it('knock out human', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -103,7 +103,7 @@ describe('Ogre', () => {
     assert.equal(human.knockedOut, true);
   });
 
-  it.skip('', function() {
+  it('apologize after knocking down', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
