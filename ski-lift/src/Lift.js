@@ -8,12 +8,25 @@ class Lift {
         this.safetyBar = 'up'
     }
 
-    admitSkier(name, trueOrFalse) {
+    admitSkier(name, hasTicket) {
         var people = new Skier(name)
-        this.skiers.push(people)
-        // console.log(this.skiers)
+        if (this.skiers.length < 2 && hasTicket){
+            this.skiers.push(people)
+        }
+        else if (hasTicket) {
+            return `Sorry, ${name}. Please wait for the next lift!`
+        }
+        else {
+            return `Sorry, ${name}. You need a lift ticket!`
+    }
+}
+    startLift(){
+        if (this.skiers.length = 4){
+            this.safetyBar = 'down'
+        }
     }
 
-} 
+   
+}
 
 module.exports = Lift;
