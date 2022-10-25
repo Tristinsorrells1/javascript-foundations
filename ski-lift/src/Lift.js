@@ -10,7 +10,7 @@ class Lift {
 
     admitSkier(name, hasTicket) {
         var people = new Skier(name)
-        if (this.skiers.length < 2 && hasTicket){
+        if (this.skiers.length < this.limit && hasTicket){
             this.skiers.push(people)
         }
         else if (hasTicket) {
@@ -21,12 +21,19 @@ class Lift {
     }
 }
     startLift(){
-        if (this.skiers.length = 4){
+        if (this.skiers.length === this.limit){
             this.safetyBar = 'down'
         }
-    }
-
-   
+        else {
+           var remaining = this.limit - this.skiers.length
+           if (remaining === 1) {
+            return `We still need ${remaining} more skier!`
+            }
+           else {
+               return `We still need ${remaining} more skiers!`
+                }
+            }
+        }
 }
 
 module.exports = Lift;
