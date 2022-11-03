@@ -8,17 +8,22 @@ class Medusa {
         this.statues = []
     }
 
-    gazeAtVictim(victim){
-        var newStatue = new Statue(victim.name)
-        this.statues.push(newStatue)
-        if (this.statues.length > 3) {
-            var person = this.statues.splice(0, 1)
-            return new Person(person[0].name, person.mood='relieved')
+    gazeAtVictim(victim) {
+        var newStat = new Statue(victim.name)
+        if (this.statues.length < 3) {
+       this.statues.push(newStat)
         }
+        else if (this.statues.length = 3) {
+            this.statues.push(newStat)
+            var newPerson = this.statues.splice(0, 1)
+            console.log(newPerson)
+           return new Person(newPerson[0].name, newPerson.mood='relieved')
+        }
+     }
     }
-}
 
-
+// we are passing in a new instance of person as our argument
+// we are using that parameter to name our new statue (and using dot notation to get only the name and not mood)
 
 module.exports = Medusa;
 

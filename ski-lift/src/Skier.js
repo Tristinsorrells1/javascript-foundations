@@ -5,19 +5,22 @@ class Skier {
         this.skillLevel = 1
         this.nextSlope = 'green circle'
     }
-    takeLesson() {
-        this.skillLevel++
-    }
-    pickSlope() {
-        if (this.skillLevel < 5) {
-            this.nextSlope = 'blue square'
-        }
-        else {
-            this.nextSlope = 'black diamond'
-        }
+    
+    takeLesson(){
+        return this.skillLevel += 1
     }
 
+    pickSlope(){
+        if (this.skillLevel > 4) {
+                this.nextSlope = 'black diamond'
+        }
+       else  if (this.skillLevel >= 3) {
+            this.nextSlope = 'blue square'
+        }
+    }
 }
 
 
 module.exports = Skier;
+
+// npm test ski-lift/test/Skier-test.js
