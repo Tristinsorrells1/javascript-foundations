@@ -310,7 +310,7 @@ describe('Ship', function() {
     assert.deepEqual(fighter.parts.hyperdrive, hyperdrive);
   });
 
-  it.skip('should be able to replace an existing part and return the difference in value', function() {
+  it('should be able to replace an existing part and return the difference in value', function() {
     var parts = {
       shell: new Part({ name: 'XC-Wing', type: 'shell', value: 8000 }),
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),

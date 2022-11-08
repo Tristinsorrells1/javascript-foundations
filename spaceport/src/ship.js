@@ -38,12 +38,10 @@ class Ship {
         })
      var addPart = this.parts.hyperdrive=newPart
 
-        for (var i = 0; i < newPartInfo.length; i++){
-            if (this.cargo[i] !== newPartInfo[i])
-            this.cargo.replace(this.cargo[i], newPartInfo[i])
-        }
+        
     }
-}
+    }
+
 
 
 
